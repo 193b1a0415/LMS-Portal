@@ -1,0 +1,198 @@
+<html>
+<head>
+<!DOCTYPE html>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html>
+<head>
+ <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style6.css') }}">
+<style>
+body {
+	font-family: Arial, Helvetica, sans-serif;
+         height: 100%;
+          width: 100%;
+          background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(banner.jpeg)
+         background-position: center;
+         background-size: cover;
+         position: absolute;
+}
+*{
+margin: 0;
+padding: 0;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+body{
+  background-image: url(1.jpeg);
+-webkit-background-size: cover;
+background-size: cover;
+background-position: center center;
+height: 100vh;
+}
+.menu-area li a{
+text-decoration: none;
+color: #fff;
+letter-spacing: 1px;
+text-transform: uppercase;
+display: block;
+padding: 0 25px;
+font-size: 14px;
+line-height: 30px;
+position: relative;
+z-index: 1;
+}
+.menu-area li{
+list-style: none;
+display: inline-block;
+}
+.custom-padding{
+padding-top: 25px;
+}
+nav{
+position: relative;
+padding: 10px 20px 10px 10px;
+text-align: right;
+z-index: 1;
+background:#333;
+margin: 0 auto;
+width: 100%;
+}
+.logo{
+width: 15%;
+float: left;
+text-transform: uppercase;
+color: #fff;
+font-size: 25px;
+text-align: left;
+padding-left: 2%;
+
+
+}
+
+.menu-area li a:hover{
+background: tomato;
+color: #fff;
+}
+nav:before{
+position: absolute;
+content: ' ';
+left: 0;
+top: 100%;
+border-top: 10px solid #333;
+border-right: 10px solid #333;
+border-left: 10px solid transparent;
+border-bottom: 10px solid transparent;
+}
+
+nav:after{
+position: absolute;
+content: ' ';
+top: 100%;
+border-top: 10px solid #333;
+border-left: 10px solid #333;
+border-right: 10px solid transparent;
+border-bottom: 10px solid transparent;
+right: 0;
+}
+
+
+h2 {
+background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/6963bbf342d87b3a2150bd8f59682b89.jpg);
+  -webkit-background-clip: text;
+background-size: contain;
+width: 100%;
+text-align: center;
+color: transparent;
+font-weight: 900;
+
+
+&::before {
+content: attr(data-heading);
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+background: linear-gradient(45deg, rgba(255,255,255,0) 45%,rgba(255,255,255,0.8) 50%,rgba(255,255,255,0) 55%,rgba(255,255,255,0) 100%);
+-webkit-background-clip: text;
+color: transparent;
+mix-blend-mode: screen;
+animation: shine 1s infinite;
+background-size: 200%;
+text-shadow:
+2px 2px 10px rgba(#000, 0.2),
+-2px 2px 10px rgba(#000, 0.2),
+-2px -2px 10px rgba(#000, 0.2);
+}
+}
+
+@keyframes shine {
+0% {background-position: -100%;}
+100% {background-position: 100%;}
+}
+
+
+
+
+
+/* Not needed for demo */
+
+@font-face {
+font-family:'frozen';
+src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Ice%20kingdom%20-%20Bold%20-%20Por%20Kustren.woff');
+}
+
+
+h2 {
+
+transform: translate(-50%, -50%);
+position: absolute;
+font-size: 3vw;
+margin: 0;
+font-family: 'frozen', serif;
+font-weight: 700;
+}
+.j{
+padding-top:50px;
+padding-left:770px;
+}
+
+</style>
+</head>
+<body>
+<div class="j"><h2 style="color:#122c7a" align="center">Library Management System</h2></div>
+<div class="custom-padding">
+  <nav>
+    <div class="logo"><img src="{{url_for('static', filename='img/logo.jpg')}}" height="40" width="220" ></div>
+    <ul class="menu-area">
+       <li><a href="/addBooks"><i class="fab fa-magento"></i>&nbsp;ADD Books</a></li>
+       <li><a href="/viewBooks"><i class="far fa-images"></i>&nbsp;VIEW Books</a></li>
+	   <li><a href="/IssueBooks"><i class="far fa-images"></i>&nbsp;Issue Books</a></li>
+	   <li><a href="/viewIssuedBooks"><i class="far fa-images"></i>&nbsp;VIEW IssuedBooks</a></li>
+       <li><a href="/viewusers"><i class="fas fa-users"></i>&nbsp;VIEW Members</a></li>
+       <li><a href="/viewadminfeedback"><i class="fas fa-address-book"></i>&nbsp;VIEW FEEDBACK</a></li>
+       <li><a href="/logout"><i class="fas fa-sign-out-alt"></i>&nbsp;LOGOUT</a></li>
+       
+    </ul>
+  </nav>
+</div>
+<div style="padding-left:500;padding-top:100;">
+<table align=center>
+<form method=get action="addBookDB">
+<tr><td>BookName</td><td><input type="text" name="bname" required=""></td></tr>
+<tr><td>Book Author Name</td><td><input type="text" name="aname" required=""></td></tr>
+<tr><td>Book Price</td><td><input type="text" name="bprice" required=""></td></tr>
+<tr><td>Book ISBN</td><td><input type="text" name="bisbn" required=""></td></tr>
+<!--<tr><td>Number of Copies</td><td><input type="text" name="noc" required=""></td></tr>-->
+<tr><td><input type="submit" value="addBook"></td><td><input type="reset" value="Clear"></td></tr>
+</form>
+</table>
+
+    </body>
+</html>

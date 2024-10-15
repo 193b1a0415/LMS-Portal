@@ -1,0 +1,74 @@
+<html>
+<head>
+     <meta charset="utf-8">
+     
+     <!--<link rel="stylesheet" href="style.css">-->
+	 
+	 <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 300px;
+  overflow: hidden;
+  background-color: #0099ff;
+  
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 66px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: green;
+}
+
+.active {
+  background-color: green;
+}
+</style>
+</head>
+<body style="background-image: url({{ url_for('static', filename='img/admin.jpg') }})">
+<center>
+<h1>Library Management System</h1>
+</center>
+<ul>
+  <li><a href="/adminlogin" class="active">Admin</a></li>
+  <li><a href="/userlogin">User</a></li>
+  <li><a href="/userregister">Register</a></li>
+  <li><a href="/aboutus">About Us</a></li>
+</ul>
+<center>
+<form action="/adminlogin" method="post">
+	<div class="login">
+		<div class="login-screen">
+			<div class="login-box">
+    <h1>Login</h1>
+    <div class="textbox">
+        <i class="fa fa-user" aria-hidden="true"></i>
+       <input type="text" placeholder="Username" name="username" value="username">
+    </div>
+  
+    <div class="textbox">
+         <i class="fa fa-lock" aria-hidden="true"></i>
+       <input type="password" placeholder="Password" name="password" value="password">
+    </div> 
+
+  <input class="btn" type="submit" name="" value="Sign in">
+			<a href="/userregister">New User</a><center>
+		</div>
+	</div>
+</form>
+</center>
+</body>
+</html>
+
+ 

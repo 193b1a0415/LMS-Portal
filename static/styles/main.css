@@ -1,0 +1,52 @@
+import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+*{
+margin: 0;
+padding: 0;
+outline: 0;
+}
+.filter{
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 1;
+opacity: .7;
+background: rgb(233,76,161);
+background: -moz-linear-gradient(90deg, rgba(233,76,161,1) 0%, rgba(199,74,233,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(233,76,161,1) 0%, rgba(199,74,233,1) 100%);
+background: linear-gradient(90deg, rgba(233,76,161,1) 0%, rgba(199,74,233,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e94cal",endColorstr="#c74ae9",GradientType=1);
+}
+table{
+position: absolute;
+z-index: 2;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+width: 60%;
+height: 30%;
+border-collapse: collapse;
+border-spacing: 0;
+border-radius: 12px 12px 0 0;
+overflow: hidden;
+box-shadow: 0 2px 12px rgba(32,32,32,..3);
+background: #fafafa;
+text-align:center;
+}
+th,td{
+padding: 12px 15px;
+}
+th{
+background: #ba68c8;
+color: #fafafa;
+text-transform: uppercase;
+font-family: 'Roboto',sans-serif;
+}
+
+td{
+font-family: 'Open $ans',sans-serif;
+}
+tr:nth-child(odd){
+background-color:#eeeeee
+}

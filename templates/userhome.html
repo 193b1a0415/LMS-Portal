@@ -1,0 +1,347 @@
+<html>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<head>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style1.css') }}">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/yourcode.js"></script>
+<style>
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+body {
+	font-family: Arial, Helvetica, sans-serif;
+         height: 100%;
+          width: 100%;
+          background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(banner.jpeg)
+         background-position: center;
+         background-size: cover;
+         position: absolute;
+}
+*{
+margin: 0;
+padding: 0;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+body{
+  background-image: url(1.jpeg);
+-webkit-background-size: cover;
+background-size: cover;
+background-position: center center;
+height: 100vh;
+}
+.menu-area li a{
+text-decoration: none;
+color: #fff;
+letter-spacing: 1px;
+text-transform: uppercase;
+display: block;
+padding: 0 25px;
+font-size: 14px;
+line-height: 30px;
+position: relative;
+z-index: 1;
+}
+.menu-area li{
+list-style: none;
+display: inline-block;
+}
+.custom-padding{
+padding-top: 25px;
+}
+nav{
+position: relative;
+padding: 10px 20px 10px 10px;
+text-align: right;
+z-index: 1;
+background:#333;
+margin: 0 auto;
+width: 100%;
+}
+.logo{
+width: 15%;
+float: left;
+text-transform: uppercase;
+color: #fff;
+font-size: 25px;
+text-align: left;
+padding-left: 2%;
+
+
+}
+
+.menu-area li a:hover{
+background: tomato;
+color: #fff;
+}
+nav:before{
+position: absolute;
+content: ' ';
+left: 0;
+top: 100%;
+border-top: 10px solid #333;
+border-right: 10px solid #333;
+border-left: 10px solid transparent;
+border-bottom: 10px solid transparent;
+}
+
+nav:after{
+position: absolute;
+content: ' ';
+top: 100%;
+border-top: 10px solid #333;
+border-left: 10px solid #333;
+border-right: 10px solid transparent;
+border-bottom: 10px solid transparent;
+right: 0;
+}
+
+.slidershow{
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+}
+
+.navigation{
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.bar{
+  width: 50px;
+  height: 10px;
+  border: 2px solid #fff;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.bar:hover{
+  background: #fff;
+}
+
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+
+.slide{
+  width: 20%;
+  transition: 0.6s;
+}
+.slide img{
+  width: 100%;
+  height: 100%;
+}
+
+#r1:checked ~ .s1{
+  margin-left: 0;
+}
+#r2:checked ~ .s1{
+  margin-left: -20%;
+}
+#r3:checked ~ .s1{
+  margin-left: -40%;
+}
+#r4:checked ~ .s1{
+  margin-left: -60%;
+}
+#r5:checked ~ .s1{
+  margin-left: -80%;
+}
+
+
+h3 {
+background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/6963bbf342d87b3a2150bd8f59682b89.jpg);
+  -webkit-background-clip: text;
+background-size: contain;
+width: 100%;
+text-align: center;
+color: transparent;
+font-weight: 900;
+
+
+&::before {
+content: attr(data-heading);
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+background: linear-gradient(45deg, rgba(255,255,255,0) 45%,rgba(255,255,255,0.8) 50%,rgba(255,255,255,0) 55%,rgba(255,255,255,0) 100%);
+-webkit-background-clip: text;
+color: transparent;
+mix-blend-mode: screen;
+animation: shine 1s infinite;
+background-size: 200%;
+text-shadow:
+2px 2px 10px rgba(#000, 0.2),
+-2px 2px 10px rgba(#000, 0.2),
+-2px -2px 10px rgba(#000, 0.2);
+}
+}
+
+@keyframes shine {
+0% {background-position: -100%;}
+100% {background-position: 100%;}
+}
+
+
+
+
+
+/* Not needed for demo */
+
+@font-face {
+font-family:'frozen';
+src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Ice%20kingdom%20-%20Bold%20-%20Por%20Kustren.woff');
+}
+
+
+h3 {
+
+transform: translate(-50%, -50%);
+position: absolute;
+font-size: 3vw;
+margin: 0;
+font-family: 'frozen', serif;
+font-weight: 700;
+}
+.j{
+padding-top:50px;
+padding-left:770px;
+}
+
+
+</style>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body background="i1.jpeg">
+<div class="j"><h3 style="color:#122c7a" align="center">Library Management System</h3></div>
+
+<div class="custom-padding">
+  <nav>
+    <div class="logo"><img src="{{url_for('static', filename='img/logo.jpg')}}" height="40" width="220" ></div>
+    <ul class="menu-area">
+       <li><a href="/UserIssueBook"><i class='fas fa-file-upload'></i>&nbsp;View Issued Book</a></li>
+       <li><a href="/profile"><i class='fas fa-user'></i>&nbsp;PROFILE</a></li>
+       <li><a href="/feedback"><i class="fas fa-pencil-alt"></i>&nbsp;FEEDBACK</a></li>
+       <li><a href="/viewfeedback"><i class="fas fa-address-book"></i>&nbsp;VIEW REVIEWS</a></li>
+       <li><a href="/logout"><i class='fas fa-sign-out-alt'></i>&nbsp;LOGOUT</a></li>
+       
+    </ul>
+  </nav>
+</div>
+
+<div class="slidershow middle">
+
+      <div class="slides">
+        <input type="radio" name="r" id="r1" checked>
+        <input type="radio" name="r" id="r2">
+        <input type="radio" name="r" id="r3">
+        <input type="radio" name="r" id="r4">
+        <input type="radio" name="r" id="r5">
+        <div class="slide s1">
+          <img class="image" src="{{url_for('static', filename='img/new11.jpg')}}" alt="">
+        </div>
+        <div class="slide">
+          <img class="image" src="{{url_for('static', filename='img/3.png')}}" alt="">
+        </div>
+        <div class="slide">
+          <img  class="image" src="{{url_for('static', filename='img/new1.jpg')}}" alt="">
+        </div>
+        <div class="slide">
+          <img class="image"  src="{{url_for('static', filename='img/new5.jpg')}}" alt="">
+        </div>
+        <div class="slide">
+          <img class="image" src="{{url_for('static', filename='img/new4.jpg')}}" alt="">
+        </div>
+      </div>
+
+      <div class="navigation">
+        <label for="r1" class="bar"></label>
+        <label for="r2" class="bar"></label>
+        <label for="r3" class="bar"></label>
+        <label for="r4" class="bar"></label>
+        <label for="r5" class="bar"></label>
+      </div>
+    </div>
+
+<!-- Service Section -->
+  <section id="services">
+    <div class="services container">
+      <div class="service-top">
+        <h1 class="section-title">Serv<span>i</span>ces</h1>
+        <p>Our Mission is
+to bring people, information, forensic science, and technology together, our mission  helps resolve missing, unidentified, and unclaimed person cases nationwide, while providing support to victims and their families.</p>
+      </div>
+      <div class="service-bottom">
+        <div class="service-item">
+          <div class="icon"><img src="{{url_for('static', filename='img/a.png')}}"/></div>
+          <h2>Investigative Support</h2>
+          <p>from seasoned staff who provide case consultations and support criminal justice efforts to drive missing and unidentified person case resolutions.</p>
+        </div>
+        <div class="service-item">
+          <div class="icon"><img src="{{url_for('static', filename='img/b.png')}}"/></div>
+          <h2>Provides Adoption</h2>
+          <p>Adoption is the new addition for your happiness which we provided. Adoption has many facets and touches people in different ways depending on their role. </p>
+        </div>
+        <div class="service-item">
+          <div class="icon"><img src="{{url_for('static', filename='img/c.png')}}"/></div>
+          <h2>Easy and Secure</h2>
+          <p>Nationwide information clearinghouse offering free, secure, easy-to-use, online technology to help expedite case associations and resolutions.</p>
+        </div>
+        <div class="service-item">
+          <div class="icon"><img src="{{url_for('static', filename='img/d.png')}}"/></div>
+          <h2>Victim Services</h2>
+          <p>Victim services providing information and support to individuals and families impacted by the loss or disappearance of a loved one.</p>
+        </div>
+      </div>
+    </div>
+<section id="contact">
+    <div class="contact container">
+      <div><h1 class="section-title">Contact <span>info</span></h1></div>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png"/></div>
+          <div class="contact-info">
+            <h1>Phone</h1>
+            <h2>+91 9550382156</h2>
+            <h2>+91 9121849175</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png"/></div>
+          <div class="contact-info">
+            <h1>Email</h1>
+            <h2>nanireddy@gmail.com</h2>
+            <h2>sharat2345@gmail.com</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png"/></div>
+          <div class="contact-info">
+            <h1>Address</h1>
+            <h2>Madhurawada, Visakhapatnam, India</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </section>
+            
+      
+
+
+    </body>
+</html>
